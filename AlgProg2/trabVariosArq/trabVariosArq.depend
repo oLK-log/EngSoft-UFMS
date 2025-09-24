@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1756953841 source:c:\users\lksf2\onedrive\documentos\engsoft-ufms\algprog2\trabvariosarq\main.cpp
+	<iostream>
+	<stdio.h>
+	"poligonos.h"
+
+1756952331 c:\users\lksf2\onedrive\documentos\engsoft-ufms\algprog2\trabvariosarq\poligonos.h
+
+1756953551 source:c:\users\lksf2\onedrive\documentos\engsoft-ufms\algprog2\trabvariosarq\poligonos.c
+	"poligonos.h"
+
+1756954406 source:c:\users\lksf2\onedrive\documentos\engsoft-ufms\algprog2\trabvariosarq\main.c
+	<stdio.h>
+	"poligonos.h"
+
