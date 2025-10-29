@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f2f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.venda-container {
+    width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.menu-navegacao ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #dcdcdc;
+}
+.menu-navegacao li{
+    flex-grow: 1;
+}
+
+.menu-navegacao a{
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    border-right: 1px solid #dcdcdc;
+    text-align: center;
+}
+
+.menu-navegacao a.ativo{
+    background-color: #989898;
+    font-weight: 700;
+    color: #000;
+}
+
+.menu-navegacao li:last-child a{
+    border-right: none;
+}
+
+.lista-produto {
+    padding: 20px;
+}
+
+.linha-cabecalho, .linha-produto {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.linha-cabecalho span {
+    font-weight: 700;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.controle-quantidade{
+    display: flex;
+    align-items: center;
+}
+
+.controle-quantidade input{
+    text-align: center;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.btn-mais, .btn-menos {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-mais {
+    background-color: #47ed6b;
+    border-radius: 50% 50% 50% 50%;
+    margin-left: 15px;
+}
+.btn-menos {
+    background-color: #f83939;
+    border-radius: 50% 50% 50% 50%;
+    margin-left: 10px;
+}
+
+.rodape-venda {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dcdcdc;
+}
+
+.total {
+    text-align: right;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.btn-finalizar {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btn-finalizar:hover {
+    background-color: #218838;
+}

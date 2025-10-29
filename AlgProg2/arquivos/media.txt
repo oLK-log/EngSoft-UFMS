@@ -1,0 +1,20 @@
+Aluno Joao media = 4.500000
+Aluno Ana media = 4.500000
+Aluno 7.0 media = 4.500000
+Aluno 8.5 media = 4.500000
+Aluno Camila media = 4.500000
+Aluno 9 media = 4.500000
+Aluno 5.0 media = 4.500000
+Aluno Pedro media = 4.500000
+Aluno 7.5 media = 4.500000
+
+Aluno Joao media = 4.500000
+Aluno Ana media = 4.500000
+Aluno 7.0 media = 4.500000
+Aluno 8.5 media = 4.500000
+Aluno Camila media = 4.500000
+Aluno 9 media = 4.500000
+Aluno 5.0 media = 4.500000
+Aluno Pedro media = 4.500000
+Aluno 7.5 media = 4.500000
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda - Mario Salgadaria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class = "venda-container">
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="#" class="ativo" title="Área de Venda" aria-label="Área de Venda">Venda</a></li>
+                <li><a href="#" title="Área de Configurações" aria-label="Área de Configurações">Configurações</a></li>
+                <li><a href="#" title="Área de Relatórios" aria-label="Área de Relatórios">Relatório</a></li>
+                <li><a href="#" title="Área de Ajuda" aria-label="Área de Ajuda">Ajuda</a></li>
+            </ul>
+        </nav>
+
+        <main class="lista-produto">
+            <div class="linha-cabecalho">
+                <span class="coluna-produto" title="Nome do produto vendido">Produto</span>
+                <span class="coluna-quantidade" title="Quantidade do produto a ser vendida">Quantidade</span>
+                <span class="coluna-valor" title="Valor do produto vezes a quantidade a ser vendida">Valor</span>
+            </div>
+
+            <div class="linha-produto">
+                <input type="text" value="Salgado un" title="Campo do nome do Produto" aria-label="Campo do nome do Produto">
+                <div class="controle-quantidade">
+                    <input type="number" value="1" title="Campo da Quantidade do Produto" aria-label="Campo da Quantidade do Produto">
+                    <button class="btn-mais" title="botão para aumentar a quantidade do produto" aria-label="botão para aumentar a quantidade do produto">+</button>
+                    <button class="btn-menos" title="botão para diminuir a quantidade do produto" aria-label="botão para diminui a quantidade do produto">-</button>
+                </div>
+                <input type="text" value="R$ 2.00" title="Campo do Total do Produto" aria-label="Campo do Total do Produto">
+            </div>
+            <div class="linha-produto">
+                <input type="text" value="Café" title="Campo do nome do Produto" aria-label="Campo do nome do Produto">
+                <div class="controle-quantidade">
+                    <input type="number" value="1" title="Campo da Quantidade do Produto" aria-label="Campo da Quantidade do Produto">
+                    <button class="btn-mais" title="botão para aumentar a quantidade do produto" aria-label="botão para aumentar a quantidade do produto">+</button>
+                    <button class="btn-menos" title="botão para diminuir a quantidade do produto" aria-label="botão para diminui a quantidade do produto">-</button>
+                </div>
+                <input type="text" value="R$ 1.00" title="Campo do Total do Produto" aria-label="Campo do Total do Produto">
+            </div>
+            <div class="linha-produto">
+                <input type="text" value="Funada 600ml" title="Campo do nome do Produto" aria-label="Campo do nome do Produto">
+                <div class="controle-quantidade">
+                    <input type="number" value="1" title="Campo da Quantidade do Produto" aria-label="Campo da Quantidade do Produto">
+                    <button class="btn-mais" title="botão para aumentar a quantidade do produto" aria-label="botão para aumentar a quantidade do produto">+</button>
+                    <button class="btn-menos" title="botão para diminuir a quantidade do produto" aria-label="botão para diminui a quantidade do produto">-</button>
+                </div>
+                <input type="text" value="R$ 4.50" title="Campo do Total do Produto" aria-label="Campo do Total do Produto">
+            </div>
+            <div class="linha-produto">
+                <input type="text" value="Lata 220ml" title="Campo do nome do Produto" aria-label="Campo do nome do Produto">
+                <div class="controle-quantidade">
+                    <input type="number" value="2" title="Campo da Quantidade do Produto" aria-label="Campo da Quantidade do Produto">
+                    <button class="btn-mais" title="botão para aumentar a quantidade do produto" aria-label="botão para aumentar a quantidade do produto">+</button>
+                    <button class="btn-menos" title="botão para diminuir a quantidade do produto" aria-label="botão para diminui a quantidade do produto">-</button>
+                </div>
+                <input type="text" value="R$ 3.00" title="Campo do Total do Produto" aria-label="Campo do Total do Produto">
+            </div>
+        </main>
+
+        <footer class="rodape-venda">
+            <div class="total">
+                <span title="Total considerando todos produtos" aria-label="Total considerando todos produtos">Total: R$ 10.50</span>
+            </div>
+            <button class="btn-finalizar" title="Botão para Finalizar venda" aria-label="Botão para Finalizar venda">FINALIZAR VENDA</button>
+        </footer>
+    </div>
+</body>
+</html>
