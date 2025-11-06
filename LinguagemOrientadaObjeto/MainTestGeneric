@@ -1,0 +1,121 @@
+/*
+ Crie uma classe MainGenerico em Java 
+
+a) Faça um método Genérico somaList
+Obs: Para restringir que o método somente aceite valores numéricos, definir como abaixo:
+public static double somaList(ArrayList<? extends Number> list)
+
+a.1) o método recebe um ArrayList (podendo ser vetor de Integer ou Double) e retorne a soma dos elementos do de um ArrayList de números.
+
+b) Faça um método main: public static void main(String[] args) 
+b.1) Ler n(n>2-fornecidos pelo usuário), que será a quantidade de elementos dos ArrayLists,
+b.2) Ler os n elementos (fornecidos pelo usuário) e adicionar aos ArrayLists,
+       -> são dois ArrayLists: Um com valores Integer e outro com valores Double 
+
+b.3) A entrada e saída deverão estar como no exemplo. Não forneça nenhuma impressão diferente do esperado.
+
+Obs: Não esqueça de incluir os imports necessários. 
+
+A saída será, conforme o exemplo:
+
+a) Os elementos do ArrayList de Inteiros e a soma dos elementos deste ArrayList
+
+b) Os elementos do ArrayList de Doubles e a soma dos elementos deste ArrayList
+ */
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainTestGeneric{
+    public static <T> void removeElemento(List<T> list){
+        for(int i = list.size() -1; i>= 0; i--){
+            if(i%2!=0){
+                list.remove(i);
+            }
+        }
+
+        for(int i=0; i< list.size(); i++){
+            System.out.print(list.get(i));
+            if(i < list.size() -1){
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        ArrayList<Integer> listaInteiros = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            listaInteiros.add(input.nextInt());
+        }
+
+        ArrayList<String> listaStrings = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            listaStrings.add(input.next());
+        }
+
+        removeElemento(listaInteiros);
+        removeElemento(listaStrings);
+    }
+}
+
+/*
+ import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.InputMismatchException;
+
+public class ArrayListRemoveIndicesPares {
+	public static <T>void removeElemento(List<T> list) {
+        Iterator<T> iterator = list.iterator();
+        int index = 0;
+        while (iterator.hasNext()) {
+            iterator.next();
+            if (index % 2 != 0) {
+                iterator.remove();
+            }
+            index++;
+        }
+	}
+
+    public static <T>void imprimeLista(List<T> list){
+        for(T element: list){
+            if(list.indexOf(element) != list.size()-1)
+                System.out.printf("%s ", element);
+            else
+                System.out.printf("%s\n", element);
+        }
+    }
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		List <Integer> listInt=new ArrayList<Integer>();
+        List <String> listString = new ArrayList<String>();
+
+		int n = sc.nextInt();
+
+		try {
+			for(int i=0;i<n;i++) {
+                listInt.add(sc.nextInt());
+            }
+            for(int i=0;i<n;i++) {
+                listString.add(sc.next());
+            }
+        
+            removeElemento(listInt);
+            removeElemento(listString);
+
+            imprimeLista(listInt);
+            imprimeLista(listString);
+
+		}catch(InputMismatchException e) {
+			System.out.println("Entrada Inválida");
+		}
+
+        sc.close();
+	}
+}
+ */

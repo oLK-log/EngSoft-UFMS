@@ -1,52 +1,69 @@
-/*Crie uma classe TesteItaratorPrevious em Java que utilize Coleções.
-
-a) Inserir o método main
--> O método main, utilizando a interface List, crie um conjunto com objetos do tipo:
-
-List<String> lista = new ArrayList<>();
-Obs: Não esqueça de incluir os imports necessários. 
-
-ENTRADA
-
--> um inteiro n, que será a quantidade de elementos da lista
--> n objetos do tipo String fornecidos pelo usuário, que serão adicionados na lista com o método add
-->Utilizando o Iterator com o método hasPrevious(),  percorra a lista ao contrário imprimindo os objeto na ordem inversa que foram impressos.
-->Com o método sort, ordene a lista e imprima da forma: System.out.println(lista);
-
-SAIDA
-
-1) a lista de entrada em ordem inversa
-2) a lista ordenada
-
-A entrada e saída deverão estar como no exemplo.
-Não forneça nenhuma impressão diferente do esperado.
-*/
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.Comparator;
+//ListIterator
+//hasPrevious() - retorna true se houver um elemento antes da posicao atual
+//previous() - retorna o elemento 
 
-public class Main{
+public class Main {
     public static void main(String[] args){
+        int numElementos;
+        String elemento;
         Scanner input = new Scanner(System.in);
+        List<String> listaPapelaria = new ArrayList<>();
 
-        List<String> lista = new ArrayList<>();
-
-        int numeroEntradas = input.nextInt();
-        for(int i=0; i<numeroEntradas; i++){
-            lista.add(input.next());
+        numElementos = input.nextInt();
+        for(int i=0; i<numElementos; i++){
+            elemento = input.next();
+            listaPapelaria.add(elemento);
         }
 
-        ListIterator<String> iterator = lista.listIterator(lista.size());
-        while(iterator.hasPrevious()){
-            String conteudo = iterator.previous();
-            System.out.printf("%s ",conteudo);
+
+        //for (TipoDoElemento nomeDaVariavel : nomeDaColecao)
+        
+        
+        ListIterator<String> listaPapelariaIterator = listaPapelaria.listIterator(listaPapelaria.size());
+        while(listaPapelariaIterator.hasPrevious()){
+            System.out.print(listaPapelariaIterator.previous()+" ");
         }
         System.out.println();
-        Collections.sort(lista);      
-        System.out.println(lista);
+
+        //reverseOrder() or naturalOrder()
+        listaPapelaria.sort(Comparator.naturalOrder());
+
+        /*while(listaPapelariaIterator.hasPrevious()){
+            System.out.println(listaPapelariaIterator.previous());
+        }*/
+        System.out.println(listaPapelaria);
     }
 }
+/*
+ import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Scanner;
+
+public class TesteReverso {
+	public static void main(String[] args) {
+		List<String> lista = new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++) {
+			lista.add(sc.next());
+		}        
+		ListIterator<String> iterator = lista.listIterator(lista.size());        
+        while (iterator.hasPrevious()) {
+            String obj = iterator.previous();
+            System.out.print(obj+" ");
+        }
+        Collections.sort(lista);
+        System.out.println("\n"+lista);
+	}
+}
+
+ */
